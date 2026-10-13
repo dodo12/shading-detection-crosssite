@@ -1,0 +1,82 @@
+{
+"brazil_windows_total": 27018,
+"brazil_invalid": 6,
+"brazil_rows_total": 45011988,
+"brazil_cycles_min": 219,
+"brazil_cycles_max": 226,
+"brazil_class_counts_G300": {
+"Full_Shading": 5898,
+"Partial_shading": 5808,
+"Standard": 954
+},
+"brazil_G300": 12660,
+"brazil_std_cal": 672,
+"reunion_cal": 2016,
+"brazil_train": 8970,
+"brazil_test": 3690,
+"reunion_test_neg": 616,
+"reunion_pos": 80,
+"reunion_pos_days": 17,
+"reunion_pos_by_type": {
+"2.x": 7,
+"3.x": 10,
+"4": 63
+},
+"signature": {
+"Brazil|healthy": {
+"n": 954,
+"loss": -0.0003453569415098334,
+"Vrel": 1.0030075529775058,
+"Irel": 0.9999740721773716
+},
+"Brazil|shaded": {
+"n": 11706,
+"loss": 0.1565893050671356,
+"Vrel": 0.9653999739832735,
+"Irel": 0.9533483392445032
+},
+"Brazil|full": {
+"n": 5898,
+"loss": 0.2787841775440294,
+"Vrel": 1.1053516176387401,
+"Irel": 0.6490403603914925
+},
+"Brazil|partial": {
+"n": 5808,
+"loss": 0.06312540361947627,
+"Vrel": 0.9438630039774295,
+"Irel": 0.9960028788974151
+},
+"Reunion|healthy": {
+"n": 2632,
+"loss": 0.006323242969735021,
+"Vrel": 0.9999456736699391,
+"Irel": 0.9951936451070866
+},
+"Reunion|shaded": {
+"n": 80,
+"loss": 0.18494793986725488,
+"Vrel": 0.8638552865291428,
+"Irel": 0.9562058458654352
+},
+"Reunion|2.x": {
+"n": 7,
+"loss": 0.3329137958678333,
+"Vrel": 0.8612275126464908,
+"Irel": 0.9597716957086156
+},
+"Reunion|3.x": {
+"n": 10,
+"loss": 0.1283956185922534,
+"Vrel": 0.8826423757225881,
+"Irel": 0.985673610438793
+},
+"Reunion|4": {
+"n": 63,
+"loss": 0.1867140139149398,
+"Vrel": 0.8626105216898038,
+"Irel": 0.9434438860876871
+}
+}
+}
+figures done

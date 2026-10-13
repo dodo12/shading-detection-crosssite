@@ -1,0 +1,50 @@
+
+== 5 classes: Standard / Full / Partial / Short-circuit / Arc  (n_train=18990, n_test=8022, classes=5, chance=0.200)
+  G,T only                     logreg bal-acc 0.202 | xgb bal-acc 0.180 (macro-F1 0.172)
+  means (V,I,P)                logreg bal-acc 0.520 | xgb bal-acc 0.636 (macro-F1 0.640)
+  means + G,T                  logreg bal-acc 0.689 | xgb bal-acc 0.778 (macro-F1 0.768)
+  ripple only (std/min/max)    logreg bal-acc 0.654 | xgb bal-acc 0.834 (macro-F1 0.834)
+  all window features          logreg bal-acc 0.865 | xgb bal-acc 0.896 (macro-F1 0.877)
+
+== 3 classes: Standard / Full shading / Partial shading  (n_train=12342, n_test=5220, classes=3, chance=0.333)
+  G,T only                     logreg bal-acc 0.343 | xgb bal-acc 0.321 (macro-F1 0.307)
+  means (V,I,P)                logreg bal-acc 0.556 | xgb bal-acc 0.770 (macro-F1 0.774)
+  means + G,T                  logreg bal-acc 0.877 | xgb bal-acc 0.902 (macro-F1 0.876)
+  ripple only (std/min/max)    logreg bal-acc 0.570 | xgb bal-acc 0.851 (macro-F1 0.834)
+  all window features          logreg bal-acc 0.902 | xgb bal-acc 0.904 (macro-F1 0.867)
+
+== binary: shaded vs standard (class imbalance ~ 1:9)  (n_train=12342, n_test=5220, classes=2, chance=0.500)
+  G,T only                     logreg bal-acc 0.500 | xgb bal-acc 0.504 (macro-F1 0.492)
+  means (V,I,P)                logreg bal-acc 0.500 | xgb bal-acc 0.717 (macro-F1 0.736)
+  means + G,T                  logreg bal-acc 0.848 | xgb bal-acc 0.896 (macro-F1 0.841)
+  ripple only (std/min/max)    logreg bal-acc 0.500 | xgb bal-acc 0.821 (macro-F1 0.801)
+  all window features          logreg bal-acc 0.865 | xgb bal-acc 0.936 (macro-F1 0.875)
+
+== LOCALISATION, full shading: which panel (1-6)  (n_train=5676, n_test=2412, classes=6, chance=0.167)
+  G,T only                     logreg bal-acc 0.174 | xgb bal-acc 0.157 (macro-F1 0.155)
+  means (V,I,P)                logreg bal-acc 0.182 | xgb bal-acc 0.175 (macro-F1 0.176)
+  means + G,T                  logreg bal-acc 0.175 | xgb bal-acc 0.177 (macro-F1 0.172)
+  ripple only (std/min/max)    logreg bal-acc 0.160 | xgb bal-acc 0.174 (macro-F1 0.172)
+  all window features          logreg bal-acc 0.178 | xgb bal-acc 0.192 (macro-F1 0.183)
+
+== LOCALISATION, partial shading: which panel (1-6)  (n_train=5718, n_test=2406, classes=6, chance=0.167)
+  G,T only                     logreg bal-acc 0.162 | xgb bal-acc 0.170 (macro-F1 0.171)
+  means (V,I,P)                logreg bal-acc 0.175 | xgb bal-acc 0.160 (macro-F1 0.158)
+  means + G,T                  logreg bal-acc 0.170 | xgb bal-acc 0.141 (macro-F1 0.140)
+  ripple only (std/min/max)    logreg bal-acc 0.169 | xgb bal-acc 0.156 (macro-F1 0.154)
+  all window features          logreg bal-acc 0.151 | xgb bal-acc 0.148 (macro-F1 0.146)
+
+Full shading per-panel medians (PG, V, I, Vstd, Istd):
+          PG   V_mean  I_mean  V_std  I_std
+panel                                      
+1.0    0.992  175.692   2.669  0.194  0.015
+2.0    0.988  177.193   2.750  0.192  0.015
+3.0    0.990  177.573   2.786  0.197  0.015
+4.0    0.996  175.627   2.592  0.192  0.015
+5.0    0.995  176.211   2.610  0.191  0.015
+6.0    1.000  177.426   2.497  0.191  0.015
+  Kruskal-Wallis across 6 panels, PG: H=66.7, p=5.07e-13
+  Kruskal-Wallis across 6 panels, V_mean: H=16.9, p=0.00471
+  Kruskal-Wallis across 6 panels, I_mean: H=7.0, p=0.222
+  Kruskal-Wallis across 6 panels, V_std: H=14.1, p=0.015
+  Kruskal-Wallis across 6 panels, I_std: H=29.2, p=2.08e-05

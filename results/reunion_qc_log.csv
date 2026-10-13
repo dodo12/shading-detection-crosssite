@@ -1,0 +1,12 @@
+step,hours_retained
+all hourly records,12559
+inverter data present,5277
+inverter records >= 90% (n >= 540),4124
+meteorological coverage >= 90%,4118
+GTI >= 100 W m-2,3719
+V > 100 V and I > 0 (both lines),3713
+line 1: 0.85 <= AC/DC <= 1.10,3705
+line 2: 0.85 <= AC/DC <= 1.10,3701
+exclude partly labelled hours,3691
+line 1: specific yield P/G >= 50% of median,3688
+line 2: specific yield P/G >= 50% of median,3676

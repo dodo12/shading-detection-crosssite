@@ -1,0 +1,58 @@
+
+A. within Brazil (chronological, n={'train': 8970, 'test': 3690, 'test_pos': 3408})
+  logreg | raw (G,T,V,I,P)                             AUC 0.981 [0.968,0.994]  AP 0.998 (prev 0.92)  bal-acc 0.900
+  logreg | physics-normalised (loss,Vrel,Irel)         AUC 0.974 [0.957,0.991]  AP 0.998 (prev 0.92)  bal-acc 0.899
+  logreg | loss only                                   AUC 0.946 [0.912,0.981]  AP 0.995 (prev 0.92)  bal-acc 0.837
+  logreg | normalised + G,T                            AUC 0.976 [0.962,0.991]  AP 0.998 (prev 0.92)  bal-acc 0.891
+  xgb | raw (G,T,V,I,P)                                AUC 0.951 [0.918,0.974]  AP 0.995 (prev 0.92)  bal-acc 0.866
+  xgb | physics-normalised (loss,Vrel,Irel)            AUC 0.968 [0.955,0.982]  AP 0.997 (prev 0.92)  bal-acc 0.906
+  xgb | loss only                                      AUC 0.935 [0.910,0.965]  AP 0.994 (prev 0.92)  bal-acc 0.844
+  xgb | normalised + G,T                               AUC 0.986 [0.971,0.998]  AP 0.999 (prev 0.92)  bal-acc 0.944
+  mlp | raw (G,T,V,I,P)                                AUC 0.984 [0.970,0.996]  AP 0.998 (prev 0.92)  bal-acc 0.955
+  mlp | physics-normalised (loss,Vrel,Irel)            AUC 0.981 [0.968,0.992]  AP 0.998 (prev 0.92)  bal-acc 0.847
+  mlp | loss only                                      AUC 0.946 [0.912,0.980]  AP 0.995 (prev 0.92)  bal-acc 0.835
+  mlp | normalised + G,T                               AUC 0.982 [0.971,0.993]  AP 0.998 (prev 0.92)  bal-acc 0.935
+
+B. within Réunion (leave-fault-day-out; test = Jan-Apr 2023)
+  logreg | raw (G,T,V,I,P)                             AUC 0.978 [0.946,0.999]  AP 0.960 (prev 0.11)  bal-acc 0.961
+  logreg | physics-normalised (loss,Vrel,Irel)         AUC 0.978 [0.943,1.000]  AP 0.972 (prev 0.11)  bal-acc 0.977
+  logreg | loss only                                   AUC 0.970 [0.932,0.996]  AP 0.910 (prev 0.11)  bal-acc 0.967
+  logreg | normalised + G,T                            AUC 0.978 [0.937,0.999]  AP 0.965 (prev 0.11)  bal-acc 0.962
+  xgb | raw (G,T,V,I,P)                                AUC 0.989 [0.976,0.999]  AP 0.968 (prev 0.11)  bal-acc 0.928
+  xgb | physics-normalised (loss,Vrel,Irel)            AUC 0.982 [0.954,1.000]  AP 0.974 (prev 0.11)  bal-acc 0.941
+  xgb | loss only                                      AUC 0.952 [0.883,0.992]  AP 0.866 (prev 0.11)  bal-acc 0.920
+  xgb | normalised + G,T                               AUC 0.987 [0.966,1.000]  AP 0.972 (prev 0.11)  bal-acc 0.960
+
+C. TRAIN Brazil -> TEST Réunion {'test_pos': 80, 'test_neg': 616}
+  logreg | raw (G,T,V,I,P)                             AUC 0.978 [0.952,0.994]  AP 0.903 (prev 0.11)  bal-acc 0.932
+  logreg | physics-normalised (loss,Vrel,Irel)         AUC 0.979 [0.948,1.000]  AP 0.975 (prev 0.11)  bal-acc 0.938
+  logreg | loss only                                   AUC 0.973 [0.933,0.997]  AP 0.929 (prev 0.11)  bal-acc 0.901
+  logreg | normalised + G,T                            AUC 0.979 [0.946,1.000]  AP 0.977 (prev 0.11)  bal-acc 0.927
+  xgb | raw (G,T,V,I,P)                                AUC 0.497 [0.396,0.596]  AP 0.323 (prev 0.11)  bal-acc 0.455
+  xgb | physics-normalised (loss,Vrel,Irel)            AUC 0.974 [0.950,0.991]  AP 0.825 (prev 0.11)  bal-acc 0.902
+  xgb | loss only                                      AUC 0.967 [0.934,0.989]  AP 0.796 (prev 0.11)  bal-acc 0.833
+  xgb | normalised + G,T                               AUC 0.984 [0.959,0.999]  AP 0.968 (prev 0.11)  bal-acc 0.887
+
+D. TRAIN Réunion -> TEST Brazil {'train': 2096, 'train_pos': 80}
+  logreg | raw (G,T,V,I,P)                             AUC 0.659 [0.630,0.691]  AP 0.965 (prev 0.92)  bal-acc 0.478
+  logreg | physics-normalised (loss,Vrel,Irel)         AUC 0.636 [0.607,0.668]  AP 0.964 (prev 0.92)  bal-acc 0.647
+  logreg | loss only                                   AUC 0.958 [0.943,0.974]  AP 0.996 (prev 0.92)  bal-acc 0.799
+  logreg | normalised + G,T                            AUC 0.640 [0.606,0.673]  AP 0.964 (prev 0.92)  bal-acc 0.666
+  xgb | raw (G,T,V,I,P)                                AUC 0.472 [0.441,0.507]  AP 0.931 (prev 0.92)  bal-acc 0.458
+  xgb | physics-normalised (loss,Vrel,Irel)            AUC 0.915 [0.891,0.937]  AP 0.992 (prev 0.92)  bal-acc 0.719
+  xgb | loss only                                      AUC 0.761 [0.727,0.794]  AP 0.972 (prev 0.92)  bal-acc 0.760
+  xgb | normalised + G,T                               AUC 0.908 [0.885,0.930]  AP 0.992 (prev 0.92)  bal-acc 0.730
+
+E. paired AUC difference (physics-normalised - raw), xgb: {"brazil_to_reunion": {"diff": 0.4764306006493506, "ci": [0.3892278698854165, 0.5798221312267695]}, "reunion_to_brazil": {"diff": 0.44360616552066523, "ci": [0.40660285575063854, 0.48355215873891944]}}
+F. mean |SHAP| (Brazil, xgb): {'loss': np.float64(4.644), 'Vrel': np.float64(1.622), 'Irel': np.float64(0.646), 'G': np.float64(0.721), 'Ta': np.float64(0.677)}
+G. robustness (XGB AUC):
+   noise_0.0 {'raw (G,T,V,I,P)': 0.951, 'physics-normalised (loss,Vrel,Irel)': 0.968, 'normalised + G,T': 0.986}
+   noise_0.01 {'raw (G,T,V,I,P)': 0.947, 'physics-normalised (loss,Vrel,Irel)': 0.965, 'normalised + G,T': 0.98}
+   noise_0.05 {'raw (G,T,V,I,P)': 0.936, 'physics-normalised (loss,Vrel,Irel)': 0.905, 'normalised + G,T': 0.912}
+   noise_0.1 {'raw (G,T,V,I,P)': 0.919, 'physics-normalised (loss,Vrel,Irel)': 0.805, 'normalised + G,T': 0.787}
+   noise_0.2 {'raw (G,T,V,I,P)': 0.887, 'physics-normalised (loss,Vrel,Irel)': 0.716, 'normalised + G,T': 0.703}
+   missing_0.0 {'raw (G,T,V,I,P)': 0.951, 'physics-normalised (loss,Vrel,Irel)': 0.968, 'normalised + G,T': 0.986}
+   missing_0.01 {'raw (G,T,V,I,P)': 0.949, 'physics-normalised (loss,Vrel,Irel)': 0.964, 'normalised + G,T': 0.982}
+   missing_0.05 {'raw (G,T,V,I,P)': 0.942, 'physics-normalised (loss,Vrel,Irel)': 0.953, 'normalised + G,T': 0.971}
+   missing_0.1 {'raw (G,T,V,I,P)': 0.933, 'physics-normalised (loss,Vrel,Irel)': 0.92, 'normalised + G,T': 0.937}
+   missing_0.2 {'raw (G,T,V,I,P)': 0.919, 'physics-normalised (loss,Vrel,Irel)': 0.871, 'normalised + G,T': 0.895}

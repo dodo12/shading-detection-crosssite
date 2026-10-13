@@ -1,0 +1,12 @@
+Brazil_healthy {'n': 954, 'loss': -0.0, 'Vrel': 1.003, 'Irel': 1.0}
+Brazil_shaded {'n': 11706, 'loss': 0.157, 'Vrel': 0.965, 'Irel': 0.953}
+Reunion_healthy {'n': 2632, 'loss': 0.006, 'Vrel': 1.0, 'Irel': 0.995}
+Reunion_shaded {'n': 80, 'loss': 0.185, 'Vrel': 0.864, 'Irel': 0.956}
+severity {'auc': 0.9911119016391604, 'ci': [0.9843434810821864, 0.9963432734132769], 'median_loss_full': 0.2787841775440294, 'median_loss_partial': 0.06312540361947627, 'n_full': 5898, 'n_partial': 5808}
+B->R xgb: normalised vs raw {'diff': 0.476, 'ci': [0.395, 0.575], 'p': 0.001, 'p_holm': 0.007}
+R->B xgb: normalised vs raw {'diff': 0.444, 'ci': [0.406, 0.481], 'p': 0.001, 'p_holm': 0.007}
+B->R xgb: loss-only vs normalised(3) {'diff': -0.007, 'ci': [-0.015, -0.0], 'p': 0.045, 'p_holm': 0.09}
+R->B logreg: loss-only vs normalised(3) {'diff': 0.323, 'ci': [0.287, 0.361], 'p': 0.001, 'p_holm': 0.007}
+within-Brazil: xgb normalised vs logreg raw {'diff': -0.013, 'ci': [-0.03, 0.003], 'p': 0.17, 'p_holm': 0.17}
+within-Brazil: xgb normalised+GT vs xgb raw {'diff': 0.034, 'ci': [0.006, 0.065], 'p': 0.005, 'p_holm': 0.015}
+cost {'logreg': {'params_or_nodes': 6, 'train_s': 0.01029658317565918, 'infer_us_per_sample': 0.4816184522013677}, 'xgb': {'params_or_nodes': 2866, 'train_s': 0.11170220375061035, 'infer_us_per_sample': 2.4188824785434138}, 'mlp': {'params_or_nodes': 1281, 'train_s': 0.4435145854949951, 'infer_us_per_sample': 1.1822072471060405}}

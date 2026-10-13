@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+# raw third-party data is never committed (download it from the sources listed in docs/DATASETS.md)
+data/raw/*
+!data/raw/.gitkeep
+# large outputs of the optional waveform step
+data/derived/raw_segments.npz
